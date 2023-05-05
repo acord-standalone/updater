@@ -1,0 +1,8 @@
+C:\Users\kirac\source\repos\AcordStandaloneUpdater\bin\Release\AcordStandaloneUpdater.exe.config
+C:\Users\kirac\source\repos\AcordStandaloneUpdater\bin\Release\AcordStandaloneUpdater.exe
+C:\Users\kirac\source\repos\AcordStandaloneUpdater\bin\Release\AcordStandaloneUpdater.pdb
+C:\Users\kirac\source\repos\AcordStandaloneUpdater\obj\Release\AcordStandaloneUpdater.csproj.AssemblyReference.cache
+C:\Users\kirac\source\repos\AcordStandaloneUpdater\obj\Release\AcordStandaloneUpdater.csproj.SuggestedBindingRedirects.cache
+C:\Users\kirac\source\repos\AcordStandaloneUpdater\obj\Release\AcordStandaloneUpdater.csproj.CoreCompileInputs.cache
+C:\Users\kirac\source\repos\AcordStandaloneUpdater\obj\Release\AcordStandaloneUpdater.exe
+C:\Users\kirac\source\repos\AcordStandaloneUpdater\obj\Release\AcordStandaloneUpdater.pdb
