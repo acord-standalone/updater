@@ -14,7 +14,7 @@ namespace AcordStandaloneUpdater
         static void Main(string[] args)
         {
 
-            // string[] releases = new string[] { "Discord", "DiscordPTB", "DiscordCanary", "DiscordDevelopment" };
+            string[] releases = new string[] { "Discord", "DiscordPTB", "DiscordCanary", "DiscordDevelopment" };
 
             string acordDataFolder = Path.Combine(appData, "Acord/data");
             Directory.CreateDirectory(acordDataFolder);
@@ -41,28 +41,30 @@ namespace AcordStandaloneUpdater
 
             Console.WriteLine(discordRelease);
 
-            Process[] processes = Process.GetProcessesByName(discordRelease.ToLower()).ToArray();
-
             string discordExePath = null;
 
-            for (int i = 0; i < processes.Length; i++)
+            foreach (string release in releases)
             {
-                Process process = processes[i];
-
-                try
+                Process[] processes = Process.GetProcessesByName(release.ToLower()).ToArray();
+                for (int i = 0; i < processes.Length; i++)
                 {
-                    process.Kill();
-                    if (discordExePath == null)
+                    Process process = processes[i];
+
+                    try
                     {
-                        discordExePath = process.MainModule.FileName;
+                        process.Kill();
+                        if (discordExePath == null && release == discordRelease)
+                        {
+                            discordExePath = process.MainModule.FileName;
+                        }
+                    }
+                    catch
+                    {
+
                     }
                 }
-                catch
-                {
-
-                }
-
             }
+
             string settingsJsonPath = Path.Combine(appData, discordRelease.ToLower(), "settings.json");
 
             if (!File.Exists(settingsJsonPath)) return;
