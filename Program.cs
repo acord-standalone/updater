@@ -35,6 +35,7 @@ namespace AcordStandaloneUpdater
                     case "DiscordCanary": discordRelease = "DiscordCanary"; break;
                     case "development": discordRelease = "DiscordDevelopment"; break;
                     case "DiscordDevelopment": discordRelease = "DiscordDevelopment"; break;
+                    default: discordRelease = "Discord"; break;
                 }
             }
 
